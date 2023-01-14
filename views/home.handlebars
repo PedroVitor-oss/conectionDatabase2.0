@@ -1,10 +1,32 @@
-<h1>{{title}}</h1>
-<form action="/cadastarClient" method="post">
-    <input type="text" name="nameClient">
-    <input type="text" name="email">
-    <input type="text" name="telefone">
-    <input type="text" name="endereco">
-    <input type="cep"  name="cep">
-    <input type="cpf"  name="cpf">
-    <button type="submit">cadastrar cliente</button>
-</form>
+
+{{{navigate}}}
+{{{header}}}
+<script>
+function activeNav(){
+    if($("nav").css("left")=="-400px"){
+        $("nav").css("left","0px");
+    }else{
+        $("nav").css("left","-400px");
+    }
+}
+$("nav ul li").attr("onclick","selectNav(this) ");
+function selectNav(i){
+    $("nav ul li.active").removeClass("active");
+    $(i).addClass("active");
+    let id = 0;
+    for(li of $("nav ul li")){
+        if(li == i){
+            activeNav();
+            break;
+        }else{
+            id++;
+        }
+    }
+    console.log("id selecionado foi -> ",id );
+}
+</script>
+<script>
+{{#each styles}}
+    $("head").append(`<link rel="stylesheet" href="{{css}}">`)
+{{/each}}
+</script>

@@ -1,0 +1,67 @@
+nav{
+    width:300px;
+    height:100vh;
+    background-color: #2E66FF;
+    transition: 0.5s;
+    position: absolute;
+    left: -400px;
+}
+nav div.title-nav,ul li
+{
+    height: 12vh;
+    display: flex;
+    padding-left: 10px;
+    font-size: 1.5pc;
+    align-items: center;
+}
+nav div.title-nav
+{
+    display: flex;
+    justify-content: space-between;
+    width:80%
+}
+nav div.title-nav h1
+{
+    margin: 0;
+    
+}
+nav div.title-nav button
+{
+    border:none;
+    background-color: transparent;
+    width: 40px;
+    height:40px;
+    cursor: pointer;
+}
+nav div.title-nav button i
+{
+    font-size: 40px;
+    color:#fff;
+}
+nav ul{
+    margin:0;
+    padding: 0;;
+    list-style: none;
+    color: #fff;
+}
+nav ul li
+{
+    
+    
+    margin: 2vh 0 ;
+    
+    width:90%;
+    display: flex;
+    border-radius: 0 15px 15px 0;
+    transition: 0.5s;
+    
+}
+nav ul li.active
+{
+    background-color: #fff;
+    color: #2E66FF;
+}
+nav ul li i
+{
+    margin-right:10%;
+}

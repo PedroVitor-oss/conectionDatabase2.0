@@ -2,6 +2,9 @@
 //config of routs
 const express = require("express");
 const app = express();
+//arquivos estaticos
+const path = require("path");
+app.use(express.static(path.join(__dirname,'public')))
 
 // configurar handlebars
 const handlebars = require('express-handlebars');
@@ -14,9 +17,23 @@ app.use(express.urlencoded({ extended: false, limit: '20mb' }));
 //carregando tabelas
 const db = require("./models/db");
 const Clientes = db.Clientes;
+//carregando componentes
+
+const { navigate,header } = require("./components/allComponents")
+
 app.get("/",(req,res)=>{
-    res.render("home",{title:process.env.NAME_SITE});
+    res.render("home",{ 
+        navigate,
+        header,
+        styles:[
+            {css:"/css/navigate.css"},
+            {css:"/css/header.css"}
+        ]
+    });
 })
+
+
+
 app.post("/cadastarClient",(req,res)=>{
     Clientes.create({
         nome:req.body.nameClient,
@@ -31,10 +48,10 @@ app.post("/cadastarClient",(req,res)=>{
         clientesData = data;
 
         res.render("clientes",{
-        clientes:clientesData
+        clientes:clientesData,
     })
     });
     
 })
-app.listen(process.env.PORT,console.log("aberto em loclhost:3000"));
+app.listen(process.env.PORT||3000,console.log("aberto em loclhost: 3000"));
 

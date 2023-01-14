@@ -1,0 +1,13 @@
+header{
+    height: 10vh;
+    background-color: transparent;
+}
+header button{
+    height: 9vh;
+    width:9vh;
+    font-size: 6vh;
+    border: none;
+    background-color: transparent;
+    color: #ddd;
+
+}
