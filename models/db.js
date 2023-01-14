@@ -1,7 +1,7 @@
 //conection with database
 const { Sequelize, Model, DataTypes } = require('sequelize');
 //conoction database online
-mysql://xgt17nun7rqc61vr:heerqhek9m3c71sl@l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/v10uyo8p78ukofnu
+//mysql://xgt17nun7rqc61vr:heerqhek9m3c71sl@l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/v10uyo8p78ukofnu
 const sequelize = new Sequelize('impersul', 'root', '1234', {
   host: 'localhost',
   dialect:'mysql' /* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */
