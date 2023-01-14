@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false, limit: '20mb' }));
 const db = require("./models/db");
 const Clientes = db.Clientes;
 app.get("/",(req,res)=>{
-    res.render("home");
+    res.render("home",{title:process.env.NAME_SITE});
 })
 app.post("/cadastarClient",(req,res)=>{
     Clientes.create({
@@ -36,5 +36,5 @@ app.post("/cadastarClient",(req,res)=>{
     });
     
 })
-app.listen(3000,console.log("aberto em loclhost:3000"));
+app.listen(process.env.PORT,console.log("aberto em loclhost:3000"));
 

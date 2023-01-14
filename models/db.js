@@ -1,9 +1,9 @@
 //conection with database
 const { Sequelize, Model, DataTypes } = require('sequelize');
 //conoction database online
-//mysql://xgt17nun7rqc61vr:heerqhek9m3c71sl@l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/v10uyo8p78ukofnu
-const sequelize = new Sequelize('impersul', 'root', '1234', {
-  host: 'localhost',
+//mysql://upeca0rjkp7mxx2n:hcqpx9ikltnbqkxv@j21q532mu148i8ms.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/w6t74vgidxtzbtqo
+const sequelize = new Sequelize('w6t74vgidxtzbtqo', 'upeca0rjkp7mxx2n', 'hcqpx9ikltnbqkxv', {
+  host: 'j21q532mu148i8ms.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306',
   dialect:'mysql' /* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */
 });
 const Clientes = sequelize.define('clientes',{
