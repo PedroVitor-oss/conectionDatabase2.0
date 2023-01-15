@@ -28,6 +28,9 @@ app.get("/",(req,res)=>{
         styles:[
             {css:"/css/navigate.css"},
             {css:"/css/header.css"}
+        ],
+        scripts:[
+            {js:"/js/navgate.js"}
         ]
     });
 })

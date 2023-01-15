@@ -11,9 +11,10 @@ nav div.title-nav,ul li
     height: 12vh;
     display: flex;
     padding-left: 10px;
-    font-size: 2pc;
+    font-size: 1.5pc;
     align-items: center;
 }
+
 nav div.title-nav
 {
     display: flex;

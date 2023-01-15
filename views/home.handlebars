@@ -1,32 +1,14 @@
 
 {{{navigate}}}
 {{{header}}}
-<script>
-function activeNav(){
-    if($("nav").css("left")=="-600px"){
-        $("nav").css("left","0px");
-    }else{
-        $("nav").css("left","-600px");
-    }
-}
-$("nav ul li").attr("onclick","selectNav(this) ");
-function selectNav(i){
-    $("nav ul li.active").removeClass("active");
-    $(i).addClass("active");
-    let id = 0;
-    for(li of $("nav ul li")){
-        if(li == i){
-            activeNav();
-            break;
-        }else{
-            id++;
-        }
-    }
-    console.log("id selecionado foi -> ",id );
-}
-</script>
+
 <script>
 {{#each styles}}
     $("head").append(`<link rel="stylesheet" href="{{css}}">`)
+{{/each}}
+</script>
+<script>
+{{#each scripts}}
+    $("body").append(`<script src="{{js}}">`)
 {{/each}}
 </script>

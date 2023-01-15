@@ -36,6 +36,9 @@ module.exports = {
         <button onclick="activeNav()">
             <i class="fa-solid fa-bars"></i>
         </button>
+        <h2 id="title-header">
+            No select
+        </h2>
     </header>
     `
     
