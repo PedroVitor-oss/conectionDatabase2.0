@@ -2,6 +2,7 @@
 //config of routs
 const express = require("express");
 const app = express();
+const port  = process.env.PORT||3000;
 //arquivos estaticos
 const path = require("path");
 app.use(express.static(path.join(__dirname,'public')))
@@ -22,20 +23,21 @@ const Clientes = db.Clientes;
 const { navigate,header } = require("./components/allComponents")
 
 app.get("/",(req,res)=>{
-    res.render("home",{ 
-        navigate,
-        header,
-        styles:[
-            {css:"/css/navigate.css"},
-            {css:"/css/header.css"}
-        ],
-        scripts:[
-            {js:"/js/navgate.js"}
-        ]
-    });
+    Clientes.findAll().then((dataClients)=>{
+        res.render("home",{ 
+            navigate,
+            header,
+            dataClients,
+            styles:[
+                {css:"/css/navigate.css"},
+                {css:"/css/header.css"}
+            ],
+            scripts:[
+                {js:"/js/navgate.js"}
+            ]
+        });
+    })
 })
-
-
 
 app.post("/cadastarClient",(req,res)=>{
     Clientes.create({
@@ -56,5 +58,5 @@ app.post("/cadastarClient",(req,res)=>{
     });
     
 })
-app.listen(process.env.PORT||3000,console.log("aberto em loclhost: 3000"));
+app.listen(port,console.log("aberto em loclhost: ",port));
 

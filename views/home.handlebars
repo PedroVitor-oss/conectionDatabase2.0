@@ -2,12 +2,19 @@
 {{{navigate}}}
 {{{header}}}
 
+
+<script>
+    let clients = [
+        {{#each dataClients}}
+           "cliente"
+        {{/each}}
+    ]
+</script>
 <script>
 {{#each styles}}
     $("head").append(`<link rel="stylesheet" href="{{css}}">`)
 {{/each}}
-</script>
-<script>
+
 {{#each scripts}}
     $("body").append(`<script src="{{js}}">`)
 {{/each}}
