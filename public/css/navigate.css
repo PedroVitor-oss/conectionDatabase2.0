@@ -4,7 +4,7 @@ nav{
     background-color: #2E66FF;
     transition: 0.5s;
     position: absolute;
-    left: -400px;
+    left: -600px;
 }
 nav div.title-nav,ul li
 {
