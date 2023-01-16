@@ -1,10 +1,11 @@
 //conection with database
 const { Sequelize, Model, DataTypes } = require('sequelize');
 //conoction database online
-//mysql://upeca0rjkp7mxx2n:hcqpx9ikltnbqkxv@j21q532mu148i8ms.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/w6t74vgidxtzbtqo
-const sequelize = new Sequelize('w6t74vgidxtzbtqo', 'upeca0rjkp7mxx2n', 'hcqpx9ikltnbqkxv', {
-  host: 'j21q532mu148i8ms.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306',
-  dialect:'mysql' /* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */
+//(database, user, password )
+const sequelize = new Sequelize('railway', 'root', 'NOtPqSSPPnrCN1qmwQCx', {
+    port: 6753,
+    host: 'containers-us-west-178.railway.app',
+    dialect:'mysql' /* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */
 });
 const Clientes = sequelize.define('clientes',{
     nome: {
@@ -38,7 +39,8 @@ const Servico = sequelize.define('servicos',{
         type: DataTypes.INTEGER
     },
 });
-// Clientes.sync({force:true})
+Clientes.sync({force:true})
+Servico.sync({force:true})
 
 module.exports = {
     Clientes:Clientes,

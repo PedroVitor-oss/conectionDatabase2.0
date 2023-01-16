@@ -18,16 +18,16 @@ app.use(express.urlencoded({ extended: false, limit: '20mb' }));
 //carregando tabelas
 const db = require("./models/db");
 const Clientes = db.Clientes;
+console.log(Clientes)
 //carregando componentes
 
 const { navigate,header } = require("./components/allComponents")
 
 app.get("/",(req,res)=>{
-    Clientes.findAll().then((dataClients)=>{
+  
         res.render("home",{ 
             navigate,
             header,
-            dataClients,
             styles:[
                 {css:"/css/navigate.css"},
                 {css:"/css/header.css"}
@@ -35,11 +35,10 @@ app.get("/",(req,res)=>{
             scripts:[
                 {js:"/js/navgate.js"}
             ]
-        });
     })
 })
 
-app.post("/cadastarClient",(req,res)=>{
+app.get("/cadastarClient",(req,res)=>{
     Clientes.create({
         nome:req.body.nameClient,
         email:req.body.email,
