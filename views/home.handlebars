@@ -1,14 +1,19 @@
 
 {{{navigate}}}
 {{{header}}}
+<selection class="main">
+    <main>
 
+    </main>
+</selection>
 
 <script>
     let clients = [
-        {{#each dataClients}}
-           "cliente"
+        {{#each dataclients}}
+           "{{dataValues.nome}}"
         {{/each}}
     ]
+    let forms = [`{{{formCadastreClients}}}`]
 </script>
 <script>
 {{#each styles}}

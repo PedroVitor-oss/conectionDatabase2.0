@@ -20,3 +20,20 @@ header button{
 header h2{
     margin-left:10%;
 }
+header div.cont-button {
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+header div.cont-button button{
+    border: 3px solid #2E66FF;
+    border-radius: 50%;
+    background-color: #2E66FF;
+    color: #fff;
+    transition: 0.5s;
+}
+header div.cont-button button:hover{
+    background-color: #fff;
+    color: #2E66FF;
+}

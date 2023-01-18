@@ -1,0 +1,84 @@
+div.fosco{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100vw;
+    height:100vh;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.fosco div.card
+{
+    background-color: #2E66FF;
+    border-radius: 20px;
+    min-width: 320px;
+    width:70%;
+    padding:20px;
+  
+    
+}
+div.fosco div.card div.hand
+{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+div.fosco div.card div.hand button
+{
+    border: 2px solid #ff000f;
+    color: #fff;
+    font-size: 3vh;
+    background-color: #ff000f;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+div.fosco div.card form
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+div.fosco div.card form div
+{
+    width:30%;
+}
+div.fosco div.card form div input
+{
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    font-size: 2.5vh;
+    color: #fff;
+    outline: none;
+    width:90%
+}
+div.fosco div.card form div input::placeholder
+{
+    color: #fff;
+}
+div.fosco div.card form div.cont-button
+{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+div.fosco div.card form div.cont-button button
+{
+    border: 2px solid #00FF3E;
+    color: #fff;
+    font-size: 3vh;
+    background-color: #00FF3E;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+@media (max-width:400px){
+    div.fosco div.card form{
+        flex-direction: column;
+    }
+    div.fosco div.card form div
+    {
+        width: 90%;
+    }
+}

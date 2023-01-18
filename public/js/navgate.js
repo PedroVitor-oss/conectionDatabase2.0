@@ -19,9 +19,27 @@ function selectNav(i){
             id++;
         }
     }
+    trocarconteudo(id);
     console.log("id selecionado foi -> ",id );
 }
 
+function trocarconteudo(id){
+    $("header.header-main div.cont-button").remove();
+    switch(id){
+        case 0://clientes
+            $("header.header-main").append(`
+                <div class="cont-button">
+                    <button onclick="addForm(0)">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            `)
+        break;
+    }
+}
+function addForm(index){
+    $("body").append(forms[index]);
+}
 if(checkDevice()){
     $("nav div.title-nav,ul li").css("font-size","2.5pc")
 }
