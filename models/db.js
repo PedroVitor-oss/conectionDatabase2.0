@@ -39,8 +39,8 @@ const Servico = sequelize.define('servicos',{
         type: DataTypes.INTEGER
     },
 });
-Clientes.sync({force:true})
-Servico.sync({force:true})
+// Clientes.sync({force:true})
+// Servico.sync({force:true})
 
 module.exports = {
     Clientes:Clientes,
