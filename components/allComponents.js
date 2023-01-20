@@ -65,7 +65,7 @@ module.exports = {
                     </div>
                     <div>
                         <h3>Endereço</h3>
-                        <input type="text" name="endereco" autocomplete="off" placeholder="Endereçoequired>
+                        <input type="text" name="endereco" autocomplete="off" placeholder="Endereçoequired">
                     </div>
                     <div>
                         <h3>CEP</h3>
