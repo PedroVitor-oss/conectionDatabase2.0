@@ -1,16 +1,25 @@
 
 {{{navigate}}}
 {{{header}}}
-<selection class="main">
+<section class="main">
     <main>
 
     </main>
-</selection>
+</section>
 
 <script>
     let clients = [
         {{#each dataclients}}
-           "{{dataValues.nome}}"
+        {
+            id:"{{dataValues.id}}",
+            nome:"{{dataValues.nome}}",
+            email:"{{dataValues.email}}",
+            telefone:"{{dataValues.telefone}}",
+            endereco:"{{dataValues.endereco}}",
+            cpf:"{{dataValues.cpf}}",
+            cep:"{{dataValues.cep}}"
+        },
+           
         {{/each}}
     ]
     let forms = [`{{{formCadastreClients}}}`]

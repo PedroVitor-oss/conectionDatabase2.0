@@ -29,7 +29,6 @@ const {
 
 app.get("/",(req,res)=>{
     Clientes.findAll().then((dataclients)=>{
-        
         res.render("home",{ 
             navigate,
             header,
@@ -38,7 +37,8 @@ app.get("/",(req,res)=>{
             styles:[
                 {css:"/css/navigate.css"},
                 {css:"/css/header.css"},
-                {css:"/css/form.css"}
+                {css:"/css/form.css"},
+                {css:"/css/home.css"}
             ],
             scripts:[
                 {js:"/js/navgate.js"},
@@ -49,6 +49,7 @@ app.get("/",(req,res)=>{
 })
 
 app.post("/cadastarClient",(req,res)=>{
+    let clientesData;
     Clientes.create({
         nome:req.body.nome,
         email:req.body.email,
@@ -56,16 +57,10 @@ app.post("/cadastarClient",(req,res)=>{
         endereco:req.body.endereco,
         cep:req.body.cep,
         cpf:req.body.cpf
-    })
-    let clientesData;
-    Clientes.findAll().then((data)=>{
-        clientesData = data;
-
-        res.render("clientes",{
-        clientes:clientesData,
-    })
-    });
-    
+    }).then(
+            res.redirect("/")
+    )
+   
 })
 app.listen(port,console.log("aberto em loclhost: ",port));
 

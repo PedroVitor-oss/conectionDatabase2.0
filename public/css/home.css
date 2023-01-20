@@ -1,0 +1,84 @@
+section.main main
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+}
+section.main main div{
+    min-width:800px;
+    
+}
+
+section.main main div.controles
+{   
+    display: flex;
+    justify-content: space-around;
+    margin-top:20px;
+}
+section.main main div.controles input
+{
+    width:70%;
+    border: 2px solid #555;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: #555;
+    outline: none;
+    
+}
+section.main main div.controles input::placeholder
+{
+    color: #bbb;
+}
+section.main main div.controles button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    width:40px;
+    color: #fff;
+    
+    height: 40px;
+    background-color: #bbb;
+    font-size: 100%;
+}
+section.main main div.cont-data
+{
+    border: 2px solid #555;
+    border-radius:20px;
+    margin: 5vh;
+    margin-bottom: 0;
+    padding: 10px;
+    height:70vh;
+    overflow-y: scroll;
+}
+section.main main div.cont-data div.item-people
+{
+    box-shadow: 0 0 10px #555;
+    border-radius:20px ;
+    height: 40px;
+    padding: 10px;
+    background-color: #eee;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    overflow: hidden;
+}
+section.main main div.cont-data div.item-people i
+{
+    font-size: 40px;
+    color: #bbb;
+    margin-right: 20px;
+}
+section.main.cell main div{
+    min-width:320px;
+}
+@media (max-width:600px){
+    section.main main div{
+        min-width:320px;
+    }
+    
+}
