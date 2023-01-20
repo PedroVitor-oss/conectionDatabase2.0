@@ -1,3 +1,12 @@
+@media (max-width:600px){
+    div.fosco div.card form{
+        flex-direction: column;
+    }
+    div.fosco div.card form div
+    {
+        width: 90%;
+    }
+}
 div.fosco{
     position: absolute;
     top:0;
@@ -72,13 +81,4 @@ div.fosco div.card form div.cont-button button
     background-color: #00FF3E;
     border-radius: 20px;
     padding: 5px 15px;
-}
-@media (max-width:400px){
-    div.fosco div.card form{
-        flex-direction: column;
-    }
-    div.fosco div.card form div
-    {
-        width: 90%;
-    }
 }
