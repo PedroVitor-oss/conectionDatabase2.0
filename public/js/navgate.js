@@ -64,5 +64,5 @@ function addForm(index){
 }
 if(checkDevice()){
     $("nav div.title-nav,ul li").css("font-size","2.5pc")
-    $("section.main").addClass("cell");
+    // $("section.main").addClass("cell");
 }

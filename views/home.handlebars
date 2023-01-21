@@ -25,11 +25,17 @@
     let forms = [`{{{formCadastreClients}}}`]
 </script>
 <script>
-{{#each styles}}
-    $("head").append(`<link rel="stylesheet" href="{{css}}">`)
-{{/each}}
+    {{#each styles}}
+        $("head").append(`<link rel="stylesheet" href="{{css}}">`)
+    {{/each}}
 
-{{#each scripts}}
-    $("body").append(`<script src="{{js}}">`)
-{{/each}}
+    if(checkDevice()){
+        {{#each stylesMobile}}
+        $("head").append(`<link rel="stylesheet" href="{{css}}">`)
+        {{/each}}
+    }
+
+    {{#each scripts}}
+        $("body").append(`<script src="{{js}}">`)
+    {{/each}}
 </script>

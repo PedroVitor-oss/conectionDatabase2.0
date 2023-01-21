@@ -40,6 +40,9 @@ app.get("/",(req,res)=>{
                 {css:"/css/form.css"},
                 {css:"/css/home.css"}
             ],
+            stylesMobile:[
+                {css:"/css/home_mobile.css"}
+            ],
             scripts:[
                 {js:"/js/navgate.js"},
                 {js:"/js/form.js"}

@@ -26,6 +26,13 @@ section.main main div.controles input
     outline: none;
     
 }
+section.main main div.controles
+{   
+    display: flex;
+    justify-content: space-around;
+    margin-top:20px;
+}
+ 
 section.main main div.controles input::placeholder
 {
     color: #bbb;
@@ -72,13 +79,4 @@ section.main main div.cont-data div.item-people i
     font-size: 40px;
     color: #bbb;
     margin-right: 20px;
-}
-section.main.cell main div{
-    min-width:320px;
-}
-@media (max-width:600px){
-    section.main main div{
-        min-width:320px;
-    }
-    
 }
