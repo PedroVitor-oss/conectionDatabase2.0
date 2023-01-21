@@ -61,6 +61,9 @@ function trocarconteudo(id){
 }
 function addForm(index){
     $("body").append(forms[index]);
+    if(checkDevice()){
+        $("div.fosco div.card form").addClass("column")
+    }
 }
 if(checkDevice()){
     $("nav div.title-nav,ul li").css("font-size","2.5pc")

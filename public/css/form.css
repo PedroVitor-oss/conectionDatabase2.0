@@ -73,19 +73,22 @@ div.fosco div.card form div.cont-button button
     background-color: #00FF3E;
     border-radius: 20px;
     padding: 5px 15px;
+    margin: 20px 0 ;
 }
-@media (max-width:600px){
-    div.fosco div.card form{
-        flex-direction: column;
-    }
-    div.fosco div.card form div
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-    }
-    div.fosco div.card form div input{
-        width:90%
-    };
+div.fosco div.card form.column{
+    flex-direction: column;
 }
+div.fosco div.card form.column div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+div.fosco div.card form.column div h3
+{
+    font-size:2.5vh;  
+}
+div.fosco div.card form.column div input{
+    width:100%
+};
